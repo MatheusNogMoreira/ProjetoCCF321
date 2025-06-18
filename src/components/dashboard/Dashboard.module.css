@@ -1,0 +1,22 @@
+.navheader {
+    background-image: url('../../../public/Designsemnome.png');
+    background-size: cover;          /* Faz a imagem cobrir todo o elemento */
+    background-position: center;     /* Centraliza a imagem */
+    background-repeat: no-repeat; 
+    width: 100vw; 
+}
+.divlogo {
+    display: flex;
+    background-image: url('../../../public/LostMidia.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 70px 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.navclass {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    margin-left: 5px;
+}
