@@ -7,7 +7,7 @@ export default function Home(){
         <main className="pagehome">
             <div>
                 <Button>
-                    RESSENTES
+                    RECENTES
                 </Button>
 
                 <div className="barraconteudo">
@@ -25,25 +25,7 @@ export default function Home(){
 
                 </div>
                 <Button>
-                    RESSENTES
-                </Button>
-
-                <div className="barraconteudo">
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    <div><p>1</p></div>
-                    
-                </div>
-                <Button>
-                    RESSENTES
+                    RECENTES
                 </Button>
 
                 <div className="barraconteudo">
@@ -61,7 +43,25 @@ export default function Home(){
                     
                 </div>
                 <Button>
-                    RESSENTES
+                    RECENTES
+                </Button>
+
+                <div className="barraconteudo">
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    <div><p>1</p></div>
+                    
+                </div>
+                <Button>
+                    RECENTES
                 </Button>
 
                 <div className="barraconteudo">
