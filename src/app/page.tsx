@@ -1,7 +1,7 @@
-import Button from "@/components/button/Button";
-import Midia_card from "@/components/midia_card/Midia_card";
+import Button from "@/app/components/button/Button";
+import Midia_card from "@/app/components/midia_card/Midia_card";
 import "./pageHome.css"
-import BarContainer from "@/components/Bar_bontainer/BarContainer";
+import BarContainer from "@/app/components/Bar_bontainer/BarContainer";
 import Link from "next/link";
 
 

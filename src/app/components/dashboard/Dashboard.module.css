@@ -1,5 +1,5 @@
 .navheader {
-    background-image: url('../../../public/Designsemnome.png');
+    background-image: url('../../../../public/Designsemnome.png');
     background-size: cover;          /* Faz a imagem cobrir todo o elemento */
     background-position: center;     /* Centraliza a imagem */
     background-repeat: no-repeat; 
@@ -7,7 +7,7 @@
 }
 .divlogo {
     display: flex;
-    background-image: url('../../../public/LostMidia.png');
+    background-image: url('../../../../public/LostMidia.png');
     background-size: contain;
     background-repeat: no-repeat;
     padding: 70px 20px;

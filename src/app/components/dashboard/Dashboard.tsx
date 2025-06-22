@@ -16,31 +16,31 @@ export function Dashboard(){
                             </Button>
                         </Link>
                         
-                        <Link href='/filmes'> 
+                        <Link href='/pages/filmes'> 
                             <Button>
                                 FILMES
                             </Button>
                         </Link>
 
-                        <Link href='/jogos'> 
+                        <Link href='/pages/jogos'> 
                             <Button>
                                 JOGOS
                             </Button>
                         </Link>
 
-                        <Link href='/outras_midias'> 
+                        <Link href='/pages/outras_midias'> 
                             <Button>
                                 OUTRAS MIDIAS
                             </Button>
                         </Link>
 
-                        <Link href='/enviar'> 
+                        <Link href='/pages/enviar'> 
                             <Button>
                                 ENVIAR MIDIA
                             </Button>
                         </Link>
 
-                        <Link href='/informacoes'> 
+                        <Link href='/pages/informacoes'> 
                             <Button>
                                 INFORMACOES
                             </Button>

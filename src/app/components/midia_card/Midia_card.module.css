@@ -1,6 +1,6 @@
 .media_card {
     position: relative; 
-    background-image: url('../../../public/download.jpeg');
+    background-image: url('../../../../public/download.jpeg');
     background-size: cover;         
     background-repeat: no-repeat; 
     overflow: hidden;
@@ -17,6 +17,23 @@
     margin: 0.5rem;
     border: 8px solid #5a2f0b;
 }
+
+.media_card_click{
+    z-index: 2; 
+    transform: translateY(5px);
+    padding: 110px 100px;
+    margin: 1rem;
+    border: 10px solid #5a2f0b;
+}
+
+.media_card_click:hover{
+    z-index: 2; 
+    transform: translateY(5px);
+    padding: 110px 100px;
+    margin: 1rem;
+    border: 10px solid #5a2f0b;
+}
+
 .media_info{
     position: absolute;
     bottom: 0;           /* cola na parte de baixo */
