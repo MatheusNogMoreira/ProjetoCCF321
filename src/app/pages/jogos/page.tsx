@@ -1,5 +1,9 @@
-export default function Jogos(){
+import "./Games.css"
+
+export default function Games(){
     return(
-        <p>Jogos</p>
+        <main className="pageGames">
+
+        </main>
     )
 }

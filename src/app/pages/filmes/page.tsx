@@ -1,5 +1,9 @@
-export default function Filmes(){
+import './Movies.css'
+
+export default function Movies(){
     return(
-        <p>Filmes</p>
+        <main className="pageMovies">
+
+        </main>
     )
 }

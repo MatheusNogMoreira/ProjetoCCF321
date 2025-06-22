@@ -1,0 +1,30 @@
+.mediaTitle{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+}
+
+.mediaTitle h1{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 20px;
+}
+.mediaTitle p{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.mediaImg{
+    position: relative; 
+    background-image: url('../../../../public/pulp.jpg');
+    background-size: cover;         
+    background-repeat: no-repeat; 
+    margin: 1rem;
+    max-width: 60px ;
+    padding: 240px 160px;
+    border: 10px solid #5a2f0b;
+}

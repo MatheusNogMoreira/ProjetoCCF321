@@ -1,0 +1,27 @@
+.mediaLink{
+    
+    display:grid;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.mediaText{
+    background-color: #ebb765;
+    margin-top: 90px;
+    margin-bottom: 3.2rem;
+    width: 550px;
+    height: 406px;
+    border: 10px solid #5a2f0b;
+
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;      /* Alinha o texto no centro */
+    
+}
+
+.mediaText p{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

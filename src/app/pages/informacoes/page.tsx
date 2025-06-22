@@ -1,6 +1,6 @@
-import './info.css'
+import './Info.css'
 
-export default function info(){
+export default function Info(){
     return(
         <main className='pageInfo'>
             <h1>Sobre o projeto</h1>

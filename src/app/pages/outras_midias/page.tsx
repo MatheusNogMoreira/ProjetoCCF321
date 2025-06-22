@@ -1,5 +1,9 @@
-export default function Outros(){
+import "./Others.css"
+
+export default function Others(){
     return(
-        <p>Outros</p>
+        <main className="pageOthers">
+
+        </main>
     )
 }
