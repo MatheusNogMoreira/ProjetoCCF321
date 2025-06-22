@@ -1,0 +1,17 @@
+.barscroll{
+    display:flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;/* IE e Edge antigos */
+     position: relative; 
+}
+
+.barcontainer::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari e Edge modernos */
+}
+
+.barcontainer div{
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+

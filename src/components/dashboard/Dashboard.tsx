@@ -12,7 +12,7 @@ export function Dashboard(){
                     <nav className={Styles.navclass}>
                         <Link href='/'> 
                             <Button>
-                                INÍCIO
+                                INICIO
                             </Button>
                         </Link>
                         
@@ -30,19 +30,19 @@ export function Dashboard(){
 
                         <Link href='/outras_midias'> 
                             <Button>
-                                OUTRAS MÍDIAS
+                                OUTRAS MIDIAS
                             </Button>
                         </Link>
 
                         <Link href='/enviar'> 
                             <Button>
-                                ENVIAR MÍDIA
+                                ENVIAR MIDIA
                             </Button>
                         </Link>
 
                         <Link href='/informacoes'> 
                             <Button>
-                                INFORMAÇÕES
+                                INFORMACOES
                             </Button>
                         </Link>
 

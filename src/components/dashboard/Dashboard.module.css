@@ -3,7 +3,7 @@
     background-size: cover;          /* Faz a imagem cobrir todo o elemento */
     background-position: center;     /* Centraliza a imagem */
     background-repeat: no-repeat; 
-    width: 100vw; 
+    width: 100vw; /*Altura*/
 }
 .divlogo {
     display: flex;

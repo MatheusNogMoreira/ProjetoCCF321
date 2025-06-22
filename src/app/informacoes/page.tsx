@@ -1,5 +1,5 @@
 export default function info(){
     return(
-        <p>Informação</p>
+        <p>Informacao</p>
     )
 }
