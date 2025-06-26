@@ -1,0 +1,72 @@
+.page-enviar {
+    background-color: #f9e3bd;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    font-family: sans-serif;
+}
+
+.form-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.form-enviar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-enviar label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-enviar input[type="text"],
+.form-enviar select,
+.form-enviar textarea,
+.form-enviar input[type="file"] {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.form-enviar textarea {
+    resize: vertical;
+}
+
+.form-enviar button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #ff914d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-enviar button:hover {
+    background-color: #ff7a26;
+}
