@@ -27,6 +27,23 @@ app.get('/api/midias', (req, res) => {
   });
 });
 
+// Rota para listar por id
+app.get('/api/midias/:id', (req, res) => {
+  const id = req.params.id;
+  const sql = 'SELECT * FROM imagens WHERE id = ?';
+
+  db.get(sql, [id], (err, row) => {
+    if (err) {
+      console.error('Erro ao buscar mídia por ID:', err.message);
+      res.status(500).json({ error: 'Erro interno no servidor' });
+    } else if (!row) {
+      res.status(404).json({ error: 'Mídia não encontrada' });
+    } else {
+      res.json(row);
+    }
+  });
+});
+
 // Servir imagens da pasta public
 app.use('/midias', express.static('public'));
 
