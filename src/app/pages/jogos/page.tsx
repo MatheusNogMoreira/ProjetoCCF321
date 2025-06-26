@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "./Games.css";
+import Link from "next/link";
 
 interface Midia {
   id: number;
@@ -17,10 +18,7 @@ export default function Games() {
     fetch("http://localhost:3000/api/midias")
       .then((res) => res.json())
       .then((data: Midia[]) => {
-        const jogos = data.filter(
-          (item) => item.tipo_midia.toLowerCase() === "jogo"
-        );
-        setGames(jogos);
+        setGames(data.filter((item) => item.tipo_midia.toLowerCase() === "jogo"));
       })
       .catch((error) => console.error("Erro ao buscar jogos:", error));
   }, []);
@@ -30,13 +28,13 @@ export default function Games() {
       <h1>Jogos Perdidos</h1>
       <div className="grid">
         {games.map((game) => (
-          <div key={game.id} className="card">
+          <Link key={game.id} href={`/midia/${game.id}`} className="card">
             <img
               src={`http://localhost:3000${game.endereco_imagem}`}
               alt={game.nome_midia}
             />
             <h2>{game.nome_midia}</h2>
-          </div>
+          </Link>
         ))}
       </div>
     </main>
