@@ -1,28 +1,29 @@
-import './Info.css'
+import './Info.css';
 
-export default function Info(){
-    return(
+export default function Info() {
+    return (
         <main className='pageInfo'>
             <h1>Sobre o projeto</h1>
-            <p >
-                Obrigada por nos visitar! 
+            <p>
+                Obrigado por nos visitar!
             </p>
 
             <p>
-                Esse site foi um projeto desenvolvido por estudantes da 
-                disciplina de Projeto de Sistemas para Web, como projeto final da disciplina. 
-                Esperamos que goste do nosso trabalho e caso queiram contribuir enviando conteúdos para serem postados no site, basta enviar através do email disponibilizado abaixo!
+                Este site foi um projeto desenvolvido por estudantes da
+                disciplina de Projeto de Sistemas para Web, como trabalho final da disciplina.
+                Esperamos que goste do nosso trabalho. Caso queira contribuir enviando conteúdos
+                para serem postados no site, basta entrar em contato através do e-mail abaixo!
             </p>
 
             <h1>Contato</h1>
 
             <p>
-                Enviar conteúdos: email@email.com
+                Enviar conteúdos: <a href="mailto:email@email.com">email@email.com</a>
             </p>
 
             <p>
-                Entrar em contato com os desenvolvedores: email@email.com
+                Entrar em contato com os desenvolvedores: <a href="mailto:email@email.com">email@email.com</a>
             </p>
         </main>
-    )
+    );
 }
