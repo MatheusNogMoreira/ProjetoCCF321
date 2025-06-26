@@ -1,5 +1,40 @@
-.pageMovies{
-    display: flex;
-    background-color: #f9e3bd; 
-    height: 100vh;
+.pageMovies   {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9e3bd;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.pageGames h1,
+.pageMovies h1,
+.pageOthers h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
