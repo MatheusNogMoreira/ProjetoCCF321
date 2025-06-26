@@ -1,92 +1,67 @@
-import Button from "@/app/components/button/Button";
+// Home.tsx (versão com banco funcionando e cards simples)
+"use client";
+
+import { useEffect, useState } from "react";
 import Midia_card from "@/app/components/midia_card/Midia_card";
-import "./pageHome.css"
 import BarContainer from "@/app/components/Bar_bontainer/BarContainer";
+import Button from "@/app/components/button/Button";
 import Link from "next/link";
+import "./pageHome.css";
 
+interface Midia {
+  id: number;
+  nome_midia: string;
+  tipo_midia: string;
+  endereco_imagem: string;
+}
 
-export default function Home(){
-    return(
-        <main className="pagehome">
-            <div>
-                <div className='botao'>
-                    <Button>
-                        RESSENTES
-                    </Button>
-                </div>
-                <BarContainer>
-                    <Midia_card > mdlfaçshgipag</Midia_card>
-                    <Midia_card>ASSOUHGP</Midia_card>
-                    <Midia_card> hsdapshdfas</Midia_card>
-                    <Midia_card> fjaospdjfas</Midia_card>
-                    <Midia_card>ajsojdfpasj</Midia_card>
-                    <Midia_card>fpajspfasj</Midia_card>
-                    <Midia_card>sopfkspkdf</Midia_card>
-                    <Midia_card>fjijifr</Midia_card>
-                    <Midia_card>iefsohpfe</Midia_card>
-                    <Midia_card>sgoprejgijs</Midia_card>
-                </BarContainer>
+export default function Home() {
+  const [midias, setMidias] = useState<Midia[]>([]);
 
-                <div className='botao'>
-                    <Link href='/filmes'>
-                        <Button>
-                            FILMES
-                        </Button>
-                    </Link>
-                </div>
-                <BarContainer>
-                    <Midia_card > mdlfaçshgipag</Midia_card>
-                    <Midia_card>ASSOUHGP</Midia_card>
-                    <Midia_card> hsdapshdfas</Midia_card>
-                    <Midia_card> fjaospdjfas</Midia_card>
-                    <Midia_card>ajsojdfpasj</Midia_card>
-                    <Midia_card>fpajspfasj</Midia_card>
-                    <Midia_card>sopfkspkdf</Midia_card>
-                    <Midia_card>fjijifr</Midia_card>
-                    <Midia_card>iefsohpfe</Midia_card>
-                    <Midia_card>sgoprejgijs</Midia_card>
-                </BarContainer>
+  useEffect(() => {
+    fetch("http://localhost:3000/api/midias")
+      .then((res) => res.json())
+      .then((data: Midia[]) => setMidias(data))
+      .catch((error) => console.error("Erro ao buscar mídias:", error));
+  }, []);
 
-                <div className='botao'>
-                    <Link href='/jogos'>
-                        <Button>
-                            JOGOS
-                        </Button>
-                    </Link>
-                </div>
-                <BarContainer>
-                    <Midia_card > mdlfaçshgipag</Midia_card>
-                    <Midia_card>ASSOUHGP</Midia_card>
-                    <Midia_card> hsdapshdfas</Midia_card>
-                    <Midia_card> fjaospdjfas</Midia_card>
-                    <Midia_card>ajsojdfpasj</Midia_card>
-                    <Midia_card>fpajspfasj</Midia_card>
-                    <Midia_card>sopfkspkdf</Midia_card>
-                    <Midia_card>fjijifr</Midia_card>
-                    <Midia_card>iefsohpfe</Midia_card>
-                    <Midia_card>sgoprejgijs</Midia_card>
-                </BarContainer>
+  const renderMidias = (tipo: string) => {
+    return midias
+      .filter((m) => m.tipo_midia.toLowerCase() === tipo.toLowerCase())
+      .map((m) => (
+        <Midia_card key={m.id}>{m.nome_midia}</Midia_card>
+      ));
+  };
 
-                <div className='botao'>
-                    <Link href='/outras_midias'>
-                        <Button>
-                            OUTROS
-                        </Button>
-                    </Link>
-                </div>
-                <BarContainer>
-                    <Midia_card > mdlfaçshgipag</Midia_card>
-                    <Midia_card>ASSOUHGP</Midia_card>
-                    <Midia_card> hsdapshdfas</Midia_card>
-                    <Midia_card> fjaospdjfas</Midia_card>
-                    <Midia_card>ajsojdfpasj</Midia_card>
-                    <Midia_card>fpajspfasj</Midia_card>
-                    <Midia_card>sopfkspkdf</Midia_card>
-                    <Midia_card>fjijifr</Midia_card>
-                    <Midia_card>iefsohpfe</Midia_card>
-                    <Midia_card>sgoprejgijs</Midia_card>
-                </BarContainer>
-            </div>
-        </main>
-    )
+  return (
+    <main className="pagehome">
+      <div>
+        <div className="botao">
+          <Button>Recentes</Button>
+        </div>
+        <BarContainer>{midias.slice(0, 10).map((m) => <Midia_card key={m.id}>{m.nome_midia}</Midia_card>)}</BarContainer>
+
+        <div className="botao">
+          <Link href="/filmes">
+            <Button>FILMES</Button>
+          </Link>
+        </div>
+        <BarContainer>{renderMidias("Filmes")}</BarContainer>
+
+        <div className="botao">
+          <Link href="/jogos">
+            <Button>JOGOS</Button>
+          </Link>
+        </div>
+        <BarContainer>{renderMidias("Jogo")}</BarContainer>
+
+        <div className="botao">
+          <Link href="/outras_midias">
+            <Button>OUTROS</Button>
+          </Link>
+        </div>
+        <BarContainer>{renderMidias("Outro")}</BarContainer>
+      </div>
+    </main>
+  );
 }
