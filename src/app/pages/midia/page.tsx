@@ -1,18 +1,51 @@
-import './Media.css'
-import Midia_card from "../../components/midia_card/Midia_card"
-import Button from '@/app/components/button/Button'
-import MediaDescription from '@/app/components/midia_descrição/MediaDescription'
-import MediaTitle from '@/app/components/midia_titulo/MediaTitle'
+"use client";
 
-export default function Media(){
-    return(
-        <main className='pageMidia'>
-            <MediaTitle titulo = 'fjdjfkdjfk' data = '22/02/2222'>
-                
-            </MediaTitle>
-            <MediaDescription>
-                O Naruto pode ser um pouco duro as vezes, talvez você não saiba disso, mas o Naruto também cresceu sem pai. Na verdade ele nunca conheceu nenhum de seus pais, e nunca teve nenhum amigo em nossa aldeia. Mesmo assim eu nunca vi ele chorar, ficar zangado ou se dar por vencido, ele está sempre disposto a melhorar, ele quer ser respeitado, é o sonho dele e o Naruto daria a vida por isso sem hesitar. Meu palpite é que ele se cansou de chorar e decidiu fazer alguma coisa a respeito!
-            </MediaDescription>
-        </main>
-    )
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation"; // para pegar o id da rota no Next 13 app-router
+import MediaDescription from "@/app/components/midia_descrição/MediaDescription";
+import MediaTitle from "@/app/components/midia_titulo/MediaTitle";
+import "./Media.css";
+
+interface Midia {
+  id: number;
+  nome_midia: string;
+  tipo_midia: string;
+  endereco_imagem: string;
+  descricao: string;
+}
+
+export default function Media() {
+  const params = useParams();
+  const [midia, setMidia] = useState<Midia | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchMidia() {
+      if (!params?.id) return;
+      try {
+        const res = await fetch(`http://localhost:3000/api/midias/${params.id}`);
+        if (!res.ok) {
+          throw new Error("Mídia não encontrada");
+        }
+        const data: Midia = await res.json();
+        setMidia(data);
+      } catch (error) {
+        console.error(error);
+        setMidia(null);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchMidia();
+  }, [params?.id]);
+
+  if (loading) return <p>Carregando...</p>;
+  if (!midia) return <p>Mídia não encontrada.</p>;
+
+  return (
+    <main className="pageMidia">
+      <MediaTitle titulo={midia.nome_midia} data={""} />
+      <MediaDescription>{midia.descricao}</MediaDescription>
+    </main>
+  );
 }
