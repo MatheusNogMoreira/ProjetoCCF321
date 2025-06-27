@@ -44,6 +44,7 @@ app.get('/api/midias/:id', (req, res) => {
   });
 });
 
+
 // Servir imagens da pasta public
 app.use('/midias', express.static('public'));
 
