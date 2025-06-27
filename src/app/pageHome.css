@@ -10,7 +10,8 @@
   margin-right: 100px;
 }
 
-.barcontainer-scroll {
+
+.barcontainer {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -18,11 +19,15 @@
   scroll-behavior: smooth;
 }
 
-.barcontainer-scroll::-webkit-scrollbar {
+.barcontainer::-webkit-scrollbar {
   height: 8px;
 }
 
-.barcontainer-scroll::-webkit-scrollbar-thumb {
-  background: #ccc;
+.barcontainer::-webkit-scrollbar-thumb {
+  background: #a07e5d; 
   border-radius: 4px;
+}
+
+.barcontainer::-webkit-scrollbar-track {
+  background: transparent;
 }
