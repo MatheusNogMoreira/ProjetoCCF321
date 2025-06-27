@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Midia_card from "@/app/components/midia_card/Midia_card";
 import "./Others.css";
-import Link from "next/link";
 
 interface Midia {
   id: number;
   nome_midia: string;
   tipo_midia: string;
   endereco_imagem: string;
+  descricao: string;
 }
 
 export default function Others() {
@@ -25,16 +26,12 @@ export default function Others() {
 
   return (
     <main className="pageOthers">
-      <h1>Outras Mídias Perdidas</h1>
+      <h1 className="titulo-centralizado">Outras Mídias Perdidas</h1>
       <div className="grid">
         {others.map((midia) => (
-          <Link key={midia.id} href={`/midia/${midia.id}`} className="card">
-            <img
-              src={`http://localhost:3000${midia.endereco_imagem}`}
-              alt={midia.nome_midia}
-            />
-            <h2>{midia.nome_midia}</h2>
-          </Link>
+          <Midia_card key={midia.id} id={midia.id}>
+            {midia.nome_midia}
+          </Midia_card>
         ))}
       </div>
     </main>
