@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Midia_card from "@/app/components/midia_card/Midia_card";
 import "./Movies.css";
-import Link from "next/link";
 
 interface Midia {
   id: number;
   nome_midia: string;
   tipo_midia: string;
   endereco_imagem: string;
+  descricao: string;
 }
 
 export default function Movies() {
@@ -25,16 +26,12 @@ export default function Movies() {
 
   return (
     <main className="pageMovies">
-      <h1>Filmes Perdidos</h1>
+      <h1 className="titulo-centralizado">Filmes Perdidos</h1>
       <div className="grid">
         {movies.map((movie) => (
-          <Link key={movie.id} href={`/midia/${movie.id}`} className="card">
-            <img
-              src={`http://localhost:3000${movie.endereco_imagem}`}
-              alt={movie.nome_midia}
-            />
-            <h2>{movie.nome_midia}</h2>
-          </Link>
+          <Midia_card key={movie.id} id={movie.id}>
+            {movie.nome_midia}
+          </Midia_card>
         ))}
       </div>
     </main>
