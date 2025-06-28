@@ -1,51 +1,45 @@
 .media_card {
-    position: relative; 
-    background-image: url('../../../../public/pulp.jpg');
-    background-size: cover;         
-    background-repeat: no-repeat; 
-    overflow: hidden;
-    transition: transform 0.55s;
-    margin: 1rem;
-    padding: 110px 100px;
-    border: 10px solid #5a2f0b;
+  width: 200px;
+  height: 280px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #a97450;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background-repeat: no-repeat;
 }
 
 .media_card:hover {
-    z-index: 2; 
-    transform: translateY(-5px);
-    padding: 120px 110px;
-    margin: 0.5rem;
-    border: 8px solid #5a2f0b;
+  z-index: 2;
+  transform: translateY(-5px);
+  margin: 0.5rem;
+  border: 8px solid #5a2f0b;
 }
 
-.media_card_click{
-    z-index: 2; 
-    transform: translateY(5px);
-    padding: 110px 100px;
-    margin: 1rem;
-    border: 10px solid #5a2f0b;
+.media_card_click {
+  transform: scale(0.98);
+  border: 10px solid #5a2f0b;
+  margin: 1rem;
 }
 
-.media_card_click:hover{
-    z-index: 2; 
-    transform: translateY(5px);
-    padding: 110px 100px;
-    margin: 1rem;
-    border: 10px solid #5a2f0b;
+.media_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #9c683c;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.media_info{
-    position: absolute;
-    bottom: 0;           /* cola na parte de baixo */
-    left: 0;
-    width: 100%;
-    background-color: #9c683c;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    opacity: 0;
-}
-
-.media_card:hover .media_info{
-    opacity: 0.7;
+.media_card:hover .media_info {
+  opacity: 0.85;
 }

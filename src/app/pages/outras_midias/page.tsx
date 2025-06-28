@@ -29,9 +29,9 @@ export default function Others() {
       <h1 className="titulo-centralizado">Outras Mídias Perdidas</h1>
       <div className="grid">
         {others.map((midia) => (
-          <Midia_card key={midia.id} id={midia.id}>
-            {midia.nome_midia}
-          </Midia_card>
+        <Midia_card key={midia.id} id={midia.id} imagem={midia.endereco_imagem}>
+          {midia.nome_midia}
+        </Midia_card>
         ))}
       </div>
     </main>

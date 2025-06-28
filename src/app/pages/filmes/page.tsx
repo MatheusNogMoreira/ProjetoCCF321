@@ -29,7 +29,7 @@ export default function Movies() {
       <h1 className="titulo-centralizado">Filmes Perdidos</h1>
       <div className="grid">
         {movies.map((movie) => (
-          <Midia_card key={movie.id} id={movie.id}>
+          <Midia_card key={movie.id} id={movie.id} imagem={movie.endereco_imagem}>
             {movie.nome_midia}
           </Midia_card>
         ))}

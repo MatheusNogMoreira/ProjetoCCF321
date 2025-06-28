@@ -29,9 +29,9 @@ export default function Home() {
     return midias
       .filter((m) => m.tipo_midia.toLowerCase() === tipo.toLowerCase())
       .map((m) => (
-        <Midia_card key={m.id} id={m.id}>
-          {m.nome_midia}
-        </Midia_card>
+      <Midia_card key={m.id} id={m.id} imagem={m.endereco_imagem}>
+        {m.nome_midia}
+      </Midia_card>
       ));
   };
 
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className="barcontainer">
           {midias.slice(0, 10).map((m) => (
-            <Midia_card key={m.id} id={m.id}>
+            <Midia_card key={m.id} id={m.id} imagem={m.endereco_imagem}>
               {m.nome_midia}
             </Midia_card>
           ))}

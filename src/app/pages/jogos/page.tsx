@@ -32,7 +32,7 @@ export default function Games() {
       <h1 className="titulo-centralizado">Jogos Perdidos</h1>
       <div className="grid">
         {games.map((game) => (
-          <Midia_card key={game.id} id={game.id}>
+          <Midia_card key={game.id} id={game.id} imagem={game.endereco_imagem}>
             {game.nome_midia}
           </Midia_card>
         ))}
