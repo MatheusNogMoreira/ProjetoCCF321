@@ -26,7 +26,7 @@ export default function Midia_card({ id, children, imagem }: Props) {
         onClick={handlerClick}
         className={`${Style.media_card} ${click ? Style.media_card_click : ""}`}
         style={{
-          backgroundImage: `url(http://localhost:3000${imagem})`,
+          backgroundImage: `url('/SimboloLostMedia.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

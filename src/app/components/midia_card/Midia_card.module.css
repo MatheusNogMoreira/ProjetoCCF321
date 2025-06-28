@@ -10,8 +10,10 @@
   background-color: #a97450;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
-  background-repeat: no-repeat;
+  background-image: url('/SimboloLostMedia.png'); 
+  background-size: cover;
+  background-position: center;
+  position: relative; 
 }
 
 .media_card:hover {
@@ -36,10 +38,6 @@
   color: white;
   text-align: center;
   padding: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.media_card:hover .media_info {
-  opacity: 0.85;
+  opacity: 1; 
+  font-weight: bold;
 }
